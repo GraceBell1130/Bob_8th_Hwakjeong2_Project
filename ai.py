@@ -229,7 +229,7 @@ def maintest(filename, unallocated, png_frag_list, moduletree, Qcore):
                         topPng.setText(1, str(png_count))
                         topPng.addChild(png_item)
                         png_predit_list.append(f.tell()-4096)
-                    elif predict[i] == 3:
+                    elif predict[i] == 4:
                         wav_item = QtWidgets.QTreeWidgetItem(topWav)
                         wav_push_button = QtWidgets.QPushButton("wav")
                         wav_push_button.clicked.connect(partial(downloadData, check_offset, "wav"))
@@ -243,7 +243,7 @@ def maintest(filename, unallocated, png_frag_list, moduletree, Qcore):
                         wav_count += 1
                         topWav.setText(1, str(wav_count))
                         topWav.addChild(wav_item)
-                    elif predict[i] == 4:
+                    elif predict[i] == 5:
                         hwp_item = QtWidgets.QTreeWidgetItem(topHwp)
                         hwp_push_button = QtWidgets.QPushButton("hwp")
                         hwp_push_button.clicked.connect(partial(downloadData, check_offset, "hwp"))
